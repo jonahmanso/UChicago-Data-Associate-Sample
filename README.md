@@ -30,7 +30,7 @@ foreach var in OverallCrimeRate ViolentCR PropertyCR Officers UnempRate MedHHInc
 */
 
 
-/*OLS GRAPH 
+/*TWFE GRAPH 
 collapse (mean) OverallCrimeRate Officers_Lag UnempRate MedHHInc Poverty White Black (semean) se_OverallCrimeRate=OverallCrimeRate, by(PDID Year)
 foreach var in OverallCrimeRate Officers_Lag {
 	reg `var' UnempRate MedHHInc Poverty White Black i.Year i.PDID
